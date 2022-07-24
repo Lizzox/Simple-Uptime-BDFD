@@ -1,0 +1,22 @@
+BDFD LANGUAGE: BDSCRIPT2
+TRIGGER: <Prefix>uptime
+
+
+
+$nomention
+$title[🚀 × __ $username[$botID] | Uptime __]
+
+$textSplit[$uptime;:]
+$var[uptime;$sub[$getTimestamp;$sum[$multi[$splitText[1];3600];$multi[$splitText[2];60];$splitText[3]]]]
+
+$description[> ⏰: Gestartet <t:$var[uptime]:R>]
+
+$footer[× $username[$botID] • Ausgeführt von $username#$discriminator[]]
+$footerIcon[$userAvatar[$botID]]
+
+$thumbnail[https://cdn.discordapp.com/attachments/1000785749676916866/1000785790722375720/unknown.png]
+$color[$random[100000;900000]]
+
+$deleteIn[5m]
+$deletecommand
+$suppressErrors
